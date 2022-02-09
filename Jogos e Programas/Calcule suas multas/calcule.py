@@ -8,9 +8,15 @@ def multa(velocidade):
     if velocidade <= 80:
         print('O carro não foi multado!')
     else:
-        valor_multa = (velocidade - 80) * 7
-        print('O valor da multa é de R$ 7.00 para cada KM excedente ao limite'
-              'Neste caso, o valor da multa é de R$ {:.2f}'.format(valor_multa))
+        while True:
+            valor_km = input('Valor da multa por Km/h: ')
+            if not vel.isnumeric():
+                print('Insira um valor numérico!')
+            else:
+                valor_km = float(valor_km)
+                valor_multa = (velocidade - 80) * valor_km
+                print('O valor da multa é de R$ {:.2f} para cada KM excedente ao limite'
+                      'Neste caso, o valor da multa é de R$ {:.2f}'.format(valor_km, valor_multa))
 
 
 while True:
