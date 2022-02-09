@@ -32,6 +32,6 @@ while True:
             restart = str(input('\n\nDeseja jogar novamente?'
                                 '\nSe não quiser, é só digitar Não.'
                                 '\nCaso contrário, digite Continuar: ')).strip()
-            if unidecode.unidecode(restart.lower()) == 'nao':
+            if unidecode.unidecode(restart.lower()) == 'nao' or unidecode.unidecode(restart.lower()) == 'n':
                 print('\nMeus parabéns, arregou!')
                 break
