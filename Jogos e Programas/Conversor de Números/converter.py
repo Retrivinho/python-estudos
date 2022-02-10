@@ -28,6 +28,7 @@ while tentativas < 3:
                               '\n Digite sua escolha: ')
         if not base_numerica.isnumeric():
             print('Escolha uma base da lista!')
+            tentativas = tentativas + 1
         converter(base_numerica, n1)
         restart = input('\nDeseja converter outro número? (S/N): ').strip().lower()
         if restart == 's':
